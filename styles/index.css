@@ -1,0 +1,228 @@
+body {
+    font-family: montserrat;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.login-page{
+    display: flex;
+    background:  #f5f5f5;
+    width: 50%;
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    justify-content: center;
+}
+.login-box {
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-page{
+    display: flex;
+    background:  rgba(139, 0, 0, 1);
+width: 50%;
+    display: flex;
+flex: 1 0 0;
+    align-items: center;
+    justify-content: center;
+}
+.logo-box{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+}
+.hand-box{
+    display: flex;
+    flex-direction: row;
+}
+.hand{
+    margin-right: 20px;
+}
+h3 {
+    color: rgba(139, 0, 0, 1);
+    font-size: 24px;
+    }
+    .Welcome{
+        color: rgba(157, 157, 157, 1);
+        font-size: 16px;
+        margin-top: -5px;
+    }
+    .email{
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+    font-size: 14px;
+   margin-top: 30px;
+   transition: border-color 0.3s ease;
+    }
+    .email:hover,
+    .email:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+    .password {
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    }
+    .password:hover,
+    .password:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+.error {
+  color: #e53935;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+  background: #fdecea;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+input.invalid {
+  border: 1px solid #e53935;
+  background-color: #fff7f7;
+}
+ .toggle-password {
+              position: absolute;
+              top: 50%;
+              right: 15px;
+              transform: translateY(-50%);
+              cursor: pointer;
+              width: 24px;
+              height: 24px;
+            }
+            .toggle-password svg {
+              width: 100%;
+              height: 100%;
+              fill: #999999;
+            }
+            .eye-line {
+              stroke:#999999;
+              stroke-width: 2;
+              display: none;
+            }
+            .show-line .eye-line {
+              display: block;
+            }
+    .remember-me {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        margin-top: 5px;
+    cursor: pointer;
+    }
+      .remember-me label {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+    .remember-me label:hover {
+    color:  rgba(139, 0, 0, 1);
+  }
+    .checkbox{
+        accent-color: rgba(139, 0, 0, 1);
+       width: 20px;
+       height: 20px;
+    }
+       .forget-password {
+           color: #8b0000;
+           text-decoration: none;
+          margin-left: 120px;
+          font-size: 16px;
+       }
+       button {
+        background: #8b0000;
+        color: rgba(243, 229, 229, 1);
+        padding: 14px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 25px;
+        width: 85%;
+        font-size: 16px;
+    }
+    button:hover {
+        background: #a00000;
+    }
+    .or {
+        margin-top: 30px;
+    }
+    .social-icon{
+        display: flex;
+        gap: 34px;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 5px;
+    }
+.social-icon img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:  rgba(226, 234, 244, 1);
+    padding: 10px;
+}
+.sign-up {
+    margin-top: 40px;
+}
+.sgn{
+    text-decoration: none;
+    color: rgba(139, 0, 0, 1);
+}
+.form-group {
+    width: 87%;
+    margin-bottom: 15px;
+}
+.dropdown {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+}
+.phone-input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+.flag-box {
+    display: flex;
+    align-items: center;
+    background-color: #faeaea;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+.flag-box img {
+    width: 20px;
+    margin-right: 5px;
+}
+.country-code {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+.phone {
+    flex: 1;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}

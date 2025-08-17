@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP Page</title>
+    <link rel="stylesheet" href="styles/sign-up.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-page">
+        <div class="login-box">
+            <h3>Join Us and Save Lives!</h3>
+            <p class="centered">Sign up to start donating or managing</p>
+            <p class="centered1">blood requests.</p>
+      
+<input class="name" type="text" placeholder="Full name" required>
+<div class="error name-error" style="color:red; font-size:13px; display:none; margin-top:2px;"></div>
+
+<input class="email" type="email" placeholder="Email" required>
+<div class="error email-error" style="color:red; font-size:13px; display:none; margin-top:2px;"></div>
+
+<input class="password" type="password" placeholder="Password" required>
+<div class="error password-error" style="color:red; font-size:13px; display:none; margin-top:2px;"></div>
+
+<input class="con-password" type="password" placeholder="Confirm password" required>
+<div class="error con-password-error" style="color:red; font-size:13px; display:none; margin-top:2px;"></div>
+
+<div class="form-group">
+  <select class="dropdown" required>
+    <option selected disabled>Blood Type</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+  </select>
+  <div class="error dropdown-error" style="color:red; font-size:13px; display:none; margin-top:2px;"></div>
+</div>
+
+<div class="phone-input">
+  <div class="flag-box">
+    <select class="country-code">
+      <option value="+971">AE +971</option>
+      <option value="+90">TR +90</option>
+      <option value="+1">US +1</option>
+    </select>
+  </div>
+  <input type="tel" placeholder="Phone Number" class="phone" required>
+  <div class="error phone-error" style="color:red; font-size:13px; display:none; margin-top:2px;"></div>
+</div>
+
+
+<div class="remember-me">
+     <input type="checkbox" id="i-agree" class="checkbox">
+  <label for="i-agree">
+    I agree to the Terms and Conditions.
+  </label>
+</div>
+
+<button onclick="redirectToDashboard()">SIGN UP</button>
+
+<p class="or">or continue with</p>
+
+
+<div class="social-icon">
+        <a href="##google">
+            <img src="image/google.png" alt="Google">
+        </a>
+        <a href="##facebook">
+            <img src="image/facebook.png" alt="Facebook">
+        </a>
+        <a href="##apple">
+            <img src="image/apple.png" alt="Apple">
+        </a>
+       
+</div>
+
+ <p class="sign-up">Don't have an account? <a href="index.html" class="sgn"> Log In.</a></p>
+        </div>
+        </div>
+        <div class="logo-page">
+            <div class="logo-box">
+            <img src="image/blood-donation.png" alt="Logo">
+            <div class="hand-box">
+            <img class="hand" src="image/donation-hand.png"> <h2>BLOOD PULS</h2>
+            </div>
+            </div>
+                </div>
+<script>
+function redirectToDashboard() {
+  // Select elements
+  const name = document.querySelector('.name');
+  const email = document.querySelector('.email');
+  const password = document.querySelector('.password');
+  const confirmPassword = document.querySelector('.con-password');
+  const bloodType = document.querySelector('.dropdown');
+  const phone = document.querySelector('.phone');
+
+  // Error display boxes
+  const nameError = document.querySelector('.name-error');
+  const emailError = document.querySelector('.email-error');
+  const passwordError = document.querySelector('.password-error');
+  const confirmPasswordError = document.querySelector('.con-password-error');
+  const dropdownError = document.querySelector('.dropdown-error');
+  const phoneError = document.querySelector('.phone-error');
+
+  // Error flag
+  let hasError = false;
+
+  // Reset all errors and borders
+  [nameError, emailError, passwordError, confirmPasswordError, dropdownError, phoneError].forEach(el => {
+    el.style.display = 'none';
+    el.textContent = '';
+  });
+  [name, email, password, confirmPassword, bloodType, phone].forEach(el => el.style.border = '');
+
+  // 1. Empty fields check
+  if (!name.value.trim()) {
+    nameError.textContent = 'Name is required.';
+    nameError.style.display = 'block';
+    name.style.border = '1.5px solid red';
+    hasError = true;
+  }
+
+  if (!email.value.trim()) {
+    emailError.textContent = 'Email is required.';
+    emailError.style.display = 'block';
+    email.style.border = '1.5px solid red';
+    hasError = true;
+  } else if (!email.value.endsWith('@gmail.com')) {
+    emailError.textContent = 'Email must end with @gmail.com.';
+    emailError.style.display = 'block';
+    email.style.border = '1.5px solid red';
+    hasError = true;
+  }
+
+  if (!password.value) {
+    passwordError.textContent = 'Password is required.';
+    passwordError.style.display = 'block';
+    password.style.border = '1.5px solid red';
+    hasError = true;
+  } else if (password.value.length < 8) {
+    passwordError.textContent = 'Password must be at least 8 characters long.';
+    passwordError.style.display = 'block';
+    password.style.border = '1.5px solid red';
+    hasError = true;
+  }
+  if (!confirmPassword.value) {
+    confirmPasswordError.textContent = 'Please confirm your password.';
+    confirmPasswordError.style.display = 'block';
+    confirmPassword.style.border = '1.5px solid red';
+    hasError = true;
+  } else if (password.value !== confirmPassword.value) {
+    confirmPasswordError.textContent = 'Passwords do not match.';
+    confirmPasswordError.style.display = 'block';
+    confirmPassword.style.border = '1.5px solid red';
+    hasError = true;
+  }
+
+  if (!bloodType.value || bloodType.value === 'Blood Type') {
+    dropdownError.textContent = 'Please select a blood type.';
+    dropdownError.style.display = 'block';
+    bloodType.style.border = '1.5px solid red';
+    hasError = true;
+  }
+
+  if (phone.value.trim()) {
+    if (!/^\d+$/.test(phone.value.trim())) {
+      phoneError.textContent = 'Phone number must contain only digits.';
+      phoneError.style.display = 'block';
+      phone.style.border = '1.5px solid red';
+      hasError = true;
+    }
+  }
+  if (hasError) return;
+  window.location.href = "Account-Verification.html";
+}
+</script>
+    </div>
+</body>
+</html>

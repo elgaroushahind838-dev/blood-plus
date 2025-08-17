@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donation Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .donation-container {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: Montserrat;
+    }
+    .donation-title {
+      text-align: left;
+      font-size: 26px;
+      font-weight: 700px;
+color: black;
+font-weight: bold;
+margin-top: -24px;
+    }
+    .section-heading {
+      font-size: 24px;
+      text-align: left;
+      color: black;
+      margin-top: 20px;
+    }
+    .section-heading2 {
+      font-size: 24px;
+      text-align: left;
+      color: black;
+      padding-top: 60px;
+    }
+    .donation-form {
+      padding: 20px 0;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 150px;
+      width: 385px;
+      height: 50px;
+      transition: border-color 0.3s ease;
+    }
+    .input-group input:hover,
+    .input-group input:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .phone-input-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .phone-input-wrapper input {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 280px;
+      height: 20px;
+    }
+    .phone-input-wrapper select {
+      width: 100px;
+      padding: 10px;
+      border-radius: 8px;
+      flex: 0 0 80px;
+      height: 55px;
+      transition: border-color 0.3s ease;
+    }
+    .phone-input-wrapper select:hover,
+    .phone-input-wrapper select:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+    .blood-type-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      justify-items: center;
+      transition: border-color 0.3s ease;
+    }
+    .blood-type-section :hover,
+    .blood-type-section :focus {
+  border-color: #8b0000;
+  outline: none;
+}
+    .blood-type-button {
+      width: 350px;
+height: 30px;
+border-radius: 8px;
+      text-align: left;
+      background-color: white;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      justify-content: center;
+      align-items: center;
+    }
+    .blood-type-button input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #8b0000; 
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+.blood-type-button input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #8b0000; 
+  border-radius: 50%;
+  transform: translate(-50%, -50%); 
+}
+    .label-text{
+      color: #667085;
+  font-size: 16px;
+  padding: 10px;
+    }
+    .form-row  {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 45px;
+      margin-bottom: 20px;
+    }
+    .Locationtext{
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 350px;
+      height: 10px;
+      transition: border-color 0.3s ease;
+    }
+    .Locationtext:hover,
+    .Locationtext:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+    .selectdate{
+      padding: 20px;
+     border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 380px
+    }
+    .form-row > div {
+      flex: 1; 
+    }
+    .textarea-section {
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+.textarea-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+  color: black;
+}
+.custom-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: both; 
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+.custom-textarea:hover,
+.custom-textarea:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+    .submit-button {
+      background-color: #8b0000;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 350px;
+      height: 48px;
+      margin-top: 50px;
+      display: block;  
+    }
+    .submit-button:hover {
+      background-color: #a30000;
+    }
+    .support-link {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 16px;
+      color: black;
+      padding-left: 90px;
+    }
+    .support-link a {
+      color: #a30000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="donation-container">
+    <h1 class="donation-title">"Make a Life-Saving Donation Today!"</h1>
+    <form class="donation-form">
+      <h2 class="section-heading">Donor Information</h2>
+      <div class="input-group">
+        <input class="nametext" type="text" placeholder="Full Name" />
+        <input class="emailtext" type="email" placeholder="Email Address" />
+        <div class="phone-input-wrapper">
+          <select>
+            <option value="+971">AE +971</option>
+                        <option value="+90">TR +90</option>
+                        <option value="+1">US +1</option>
+          </select>
+          <input type="tel" placeholder="Phone Number" />
+        </div>
+      </div>
+      <h2 class="section-heading2">Blood Type</h2>
+      <div class="blood-type-section">
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">A+</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">A-</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">B+</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">B-</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">AB+</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">AB-</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">O+</span>
+        </label>
+        <label class="blood-type-button">
+          <input type="radio" name="blood" />
+          <span class="label-text">O-</span>
+        </label>
+      </div>
+      <div class="form-row">
+        <div>
+          <h2 class="section-heading">Location</h2>
+          <input class="Locationtext" type="text" placeholder="Add Location" />
+        </div>
+        <div>
+          <h2 class="section-heading">Preferred Date</h2>
+          <select class="selectdate">
+            <option value="">Select Date</option>
+            <option value="2025-01-01">Wednesday, 1th January</option>
+            <option value="2025-01-08">Wednesday, 8th January</option>
+            <option value="2025-01-15">Wednesday, 15th January</option>
+          </select>
+        </div>
+      </div>
+      <div class="textarea-section">
+        <h2 class="textarea-title">"Do you suffer from any illnesses?"</h2>
+        <textarea class="custom-textarea"></textarea>
+      </div>
+      <button class="submit-button" type="submit">Submit Donation</button>
+      <p class="support-link">Need Help? <a href="contact.html">Contact Us</a></p>
+    </form>
+  </div>
+</body>
+</html>

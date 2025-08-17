@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Plus</title>
+    <link rel="stylesheet" href="styles/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="image/donation-hand2.png" alt="Logo" />
+        <h2>BLOOD PLUS</h2>
+      </div>
+        <div class="notification-wrapper">
+  <!-- Bildirim-->
+  <div class="contact">
+    <img src="image/notification.png" alt="Notification Icon" id="notificationToggle">
+  </div>
+  <!-- Bildirim kutusu -->
+  <div class="notification-box" id="notificationBox">
+    <div class="notification-header">
+      <strong>Notification</strong>
+      <span id="closeNotification">&times;</span>
+    </div>
+    <div class="notification-item">
+      <div class="dot blue"></div>
+      <div class="content">
+        <strong>New Blood Request</strong>
+        <p>A request for blood type O+ has been received from City Hospital.</p>
+      </div>
+      <span class="time">30 minutes ago</span>
+    </div>
+    <div class="notification-item">
+      <div class="dot red"></div>
+      <div class="content">
+        <strong>Blood Unit Nearing Expiry</strong>
+        <p>Blood unit of type B- expires on 2023-11-06. 10 minutes ago</p>
+      </div>
+      <span class="time">10 minutes ago</span>
+    </div>
+    <div class="notification-item">
+      <div class="dot green"></div>
+      <div class="content">
+        <strong>Donation Confirmed</strong>
+        <p>A new donation of blood type A+ has been successfully registered.</p>
+      </div>
+      <span class="time">2 hours ago</span>
+    </div>
+  </div>
+</div>
+    </header>
+    <div class="container">
+      <nav class="sidebar">
+        <ul>
+          <li>
+            <a href="Dashboard.html" class="Dashboard-link active">
+              <div class="icon-box"><img src="image/home.svg" class="icon-svg" /></div>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="request.html" class="Dashboard-link">
+              <span class="icon-box">
+                <img src="image/Request.svg" class="icon-svg" />
+              </span>
+              <span class="nav-text">Request</span>
+            </a>
+          </li>
+          <li>
+            <a href="Inventory.html" class="Dashboard-link">
+              <span class="icon-box">
+                <img src="image/Inventory.svg" alt="about us" class="icon-svg" />
+              </span>
+              <span class="nav-text">Inventory</span>
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <div class="help-card">
+            <svg class="background-pattern" viewBox="0 0 600 600">
+              <circle cx="600" cy="600" r="100" />
+              <circle cx="600" cy="600" r="200" />
+              <circle cx="600" cy="600" r="300" />
+              <circle cx="600" cy="600" r="400" />
+            </svg>
+            <div class="icon-wrapper">
+              <div class="icon">?</div>
+            </div>
+            <div class="content">
+              <h2>Need help?</h2>
+              <p>Please check our docs</p>
+              <button class="doc-button">DOCUMENTATION</button>
+            </div>
+          </div>
+        <a href="profile-dashboard.html" class="profile-container">
+          <div class="avatar">
+            <img src="image/User.png" alt="User" />
+          </div>
+          <div class="profile-info">
+            <h2>Abod</h2>
+            <p>Abdulmotia@gmail.com</p>
+          </div>
+          <div class="arrow">
+            <img src="image/ok.png" alt="Arrow" />
+          </div>
+        </a>
+      </nav>
+      <main>
+        <div class="ana">
+            <!-- part-1-->
+        <h2 style="color: rgb(0, 0, 0); font-size: 26px; margin-top: 50px;">Welcome, Admin Name</h2>
+        <p style="color: gray; font-size: 18px;" >Gaza Blood Bank Dashboard</p>
+        <div class="card-container">
+            <div class="total-blood-card">
+              <h3>Total Available<br>Blood Bags</h3>
+              <div class="count">830</div>
+              <div class="label">Available Bags</div>
+              <div class="icon2">
+                <img src="image/Frame.png" alt="blood bag">
+              </div>
+            </div>
+          <div class="blood-card">
+            <div class="blood-type"> <p>B+</p></div>
+            <div class="bag-count">182</div>
+            <div class="label">Bags Available</div>
+            <canvas class="chart" width="160" height="50"></canvas>
+          </div>
+          <div class="blood-card">
+            <div class="blood-type"> <p>AB-</p></div>
+            <div class="bag-count">40</div>
+            <div class="label">Bags Available</div>
+            <canvas class="chart" width="160" height="50"></canvas>
+          </div>
+          <div class="blood-card">
+            <div class="blood-type"> <p>O</p></div>
+            <div class="bag-count">7</div>
+            <div class="label">Bags Available</div>
+            <canvas class="chart" width="160" height="50"></canvas>
+          </div>       
+          <div class="blood-card">
+            <div class="blood-type"> <p>Ab-</p></div>
+            <div class="bag-count">322</div>
+            <div class="label">Bags Available</div>
+            <canvas class="chart" width="160" height="50"></canvas>
+          </div>
+        </div>
+  <!--request-section part-2-->
+       <div class="dashboard-content">
+        <div class="request-section">
+            <div class="section-header">
+              <h2>My Requests</h2>
+              <div class="filters">
+                <select class="date-picker">
+                    <option>Jan 18, 2025 - Jan 31, 2025</option>
+                    <option>Feb 1, 2025 - Feb 14, 2025</option>
+                    <option>Feb 15, 2025 - Feb 28, 2025</option>
+                  </select>
+                <button class="filter-button"><img src="image/filters.png"> Filters</button>
+              </div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #e4e4e6; margin: 10px 0; width: 100%;" />
+            <table class="request-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Location</th>
+                  <th>ID</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Blood</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-reject">Reject</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-reject">Reject</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-reject">Reject</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+                <tr><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span></td></tr>
+              </tbody>
+            </table>
+      </div>
+  <!--charts part-3-->
+          <div class="card-container2">
+    <div class="card-header">
+      <h3>Your cards</h3>
+      <span>⋯</span>
+    </div>
+    <div class="card-subtext">manage and track your card spending.</div>
+    <div class="divider"></div>
+ <div class="donut-chart">
+  <canvas id="donutChart" width="250" height="250"></canvas>
+  <div class="legend">
+    <span class="bplus">Blood Group B+</span>
+    <span class="others">Others Bloods</span>
+    <span class="abplus">Blood Group AB+</span>
+    <span class="bminus">Blood Group B-</span>
+  </div>
+</div>
+    <div class="actions">
+      <div><button class="topup"><img src="image/top-up.png"></button><small>Top UP</small></div>
+      <div><button class="request"><img src="image/requ.png"></button><small>Request</small></div>
+      <div><button class="history"><img src="image/history.png"></button><small>History</small></div>
+    </div>
+    <div class="recent-header">
+      <div class="recent-section">Recent Request</div>
+      <a href="#">See All</a>
+    </div>
+    <div class="request-item">
+      <div class="info">
+        <img src="image/ratul.png" >
+        <div class="text">
+          <span class="name">Ratul Ahmed <span class="badge">Ab+</span></span>
+          <span class="date">Jan 17, 2023</span>
+        </div>
+      </div>
+      <button class="approve-button">Approve</button>
+    </div>
+    <div class="request-item">
+      <div class="info">
+          <img src="image/ratul.png" >
+        <div class="text">
+          <span class="name">Ratul Ahmed <span class="badge">Ab+</span></span>
+          <span class="date">Jan 17, 2023</span>
+        </div>
+      </div>
+      <button class="approve-button">Approve</button>
+    </div>
+    <div class="request-item">
+      <div class="info">
+          <img src="image/ratul.png" >
+        <div class="text">
+          <span class="name">Ratul Ahmed <span class="badge">Ab+</span></span>
+          <span class="date">Jan 17, 2023</span>
+        </div>
+      </div>
+      <button class="approve-button">Approve</button>
+    </div>
+  </div>
+ </div>
+      </div>
+  <script>
+const canvas = document.getElementById('donutChart');
+const ctx = canvas.getContext('2d');
+const data = [15, 40, 20, 15];
+const colors = ['#4169e1', '#ffd700', '#ffa500', '#f4a3a3'];
+const highlightColors = ['#274db8', '#e6c400', '#e59400', '#e28d8d'];
+const labels = ['bplus', 'bminus', 'abplus', 'others'];
+let total = data.reduce((a, b) => a + b);
+let slices = [];
+function drawChart(highlightIndex = null) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  slices = [];
+  let angle = -0.2 * Math.PI;
+  data.forEach((value, i) => {
+    const sliceAngle = (value / total) * (2 * Math.PI);
+    slices.push({ start: angle, end: angle + sliceAngle });
+    ctx.beginPath();
+    ctx.arc(125, 125, 100, angle, angle + sliceAngle);
+    ctx.lineWidth = 20;
+    ctx.strokeStyle = (i === highlightIndex) ? highlightColors[i] : colors[i];
+    ctx.stroke();
+    angle += sliceAngle;
+  });
+  ctx.beginPath();
+  ctx.arc(125, 125, 70, 0, 2 * Math.PI);
+  ctx.fillStyle = '#f3f3f3';
+  ctx.fill();
+}
+drawChart();
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left - 125;
+  const y = e.clientY - rect.top - 125;
+  const dist = Math.sqrt(x * x + y * y);
+  if (dist < 100 && dist > 70) {
+    const angle = Math.atan2(y, x);
+    const fixedAngle = angle < -0.2 * Math.PI ? angle + 2 * Math.PI : angle;
+    let hoveredIndex = -1;
+    slices.forEach((slice, i) => {
+      if (fixedAngle >= slice.start && fixedAngle <= slice.end) {
+        hoveredIndex = i;
+      }
+    });
+    drawChart(hoveredIndex);
+    document.querySelectorAll('.legend span').forEach(span => {
+      span.classList.remove('active-hover');
+    });
+    if (hoveredIndex !== -1) {
+      const labelClass = '.' + labels[hoveredIndex];
+      const target = document.querySelector(labelClass);
+      if (target) {
+        target.classList.add('active-hover');
+      }
+    }
+  } else {
+    drawChart();
+    document.querySelectorAll('.legend span').forEach(span => {
+      span.classList.remove('active-hover');
+    });
+  }
+});
+    const links = document.querySelectorAll('.Dashboard-link');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        links.forEach(l => l.classList.remove('active')); 
+        this.classList.add('active'); 
+      });
+    });
+    document.querySelectorAll('.chart').forEach(canvas => {
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const points = [
+              { x: 0, y: 50 },
+              { x: 30, y: 45 },
+              { x: 70, y: 0 }, 
+              { x: 90, y: 30 },
+              { x: 120, y: 45 },
+              { x: 160, y: 15 }
+            ];
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length - 1; i++) {
+              const xc = (points[i].x + points[i + 1].x) / 2;
+              const yc = (points[i].y + points[i + 1].y) / 2;
+              ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+            }
+            ctx.strokeStyle = '#8b0000';
+            ctx.lineWidth = 6;
+            ctx.shadowColor = 'rgba(139,0,0,0.3)';
+            ctx.shadowBlur = 8;
+            ctx.lineJoin = "round";
+            ctx.stroke();
+            const highlight = points[2];
+            ctx.beginPath();
+            ctx.shadowBlur = 0;
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = '#8b0000';
+            ctx.fillStyle = '#fff';
+            ctx.arc(highlight.x, highlight.y + 10, 7, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+          });
+  const toggleBtn = document.getElementById("notificationToggle");
+  const box = document.getElementById("notificationBox");
+  const closeBtn = document.getElementById("closeNotification");
+  toggleBtn.addEventListener("click", () => {
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  });
+  closeBtn.addEventListener("click", () => {
+    box.style.display = "none";
+  });
+  </script>
+  </body>
+</html>

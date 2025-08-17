@@ -1,0 +1,231 @@
+body {
+    font-family: montserrat;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.login-page{
+    display: flex;
+    background:  #f5f5f5;
+    width: 50%;
+     display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    justify-content: center;
+}
+.login-box {
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-page{
+    display: flex;
+    background:  rgba(139, 0, 0, 1);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-box{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+      display: flex;
+flex: 1 0 0;
+    transition: border-color 0.3s ease;
+}
+.name:hover,
+.name:focus,
+.email:hover,
+.email:focus,
+.password:hover,
+.password:focus,
+.con-password:hover,
+.con-password:focus,
+.dropdown:hover,
+.dropdown:focus,
+.phone-input:hover,
+.phone-input:focus {
+  border-color: #8b0000;
+  outline: none;
+}
+
+.hand-box{
+    display: flex;
+    flex-direction: row;
+}
+.hand{
+    margin-right: 20px;
+}
+
+h3 {
+    color: rgba(139, 0, 0, 1);
+    font-size: 24px;
+    }
+    .centered {
+        gap: 16px;
+       font-size: 16px;
+        color: rgba(157, 157, 157, 1);
+          }
+    .centered1 {
+    margin-top: -10px;
+    color: rgba(157, 157, 157, 1);
+      }
+      .name{
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+    font-size: 14px;
+   margin-top: 30px;
+    }
+    .email{
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-top: 10px;
+        outline: none;
+    }
+  
+    .password {
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+        margin-top: 10px;
+    }
+    .con-password {
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+       font-size: 14px;
+       outline: none;
+       margin-top: 10px;
+    }
+
+    .form-group {
+    width: 87%;
+    margin-bottom: 20px;
+}
+.dropdown {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    color: rgb(95, 94, 94);
+    outline: none;
+}
+.phone-input {
+    width: 83%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.flag-box {
+    display: flex;
+    align-items: center;
+    background-color: #faeaea;
+    padding: 5px 5px;
+    margin-right: 8px;
+}
+.country-code {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+}
+.phone {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+      input.invalid, select.invalid {
+    border: 1.5px solid red;
+  }
+  .error {
+    color: red;
+    font-size: 13px;
+    margin-top: 2px;
+    display: none;
+  }
+    .remember-me {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-top: 25px;
+        margin-right: 140px;
+    }
+    .checkbox{
+        accent-color: rgba(139, 0, 0, 1);
+    }
+    
+      .remember-me label {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+    .remember-me label:hover {
+    color:  rgba(139, 0, 0, 1); 
+  }
+    .checkbox{
+        accent-color: rgba(139, 0, 0, 1);
+       width: 20px;
+       height: 20px;
+      
+    }
+       button {
+        background: #8b0000;
+        color: rgba(243, 229, 229, 1);
+        padding: 14px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 25px;
+        width: 89%;
+        font-size: 16px;
+    }
+    button:hover {
+        background: #a00000;
+    }
+    .or {
+        margin-top: 30px;
+    }
+    .social-icon{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 5px;
+    }
+.social-icon img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:  rgba(226, 234, 244, 1);
+    padding: 10px;
+}
+.sign-up {
+    margin-top: 40px;
+}
+.sgn{
+    text-decoration: none;
+    color: rgba(139, 0, 0, 1);
+}
+

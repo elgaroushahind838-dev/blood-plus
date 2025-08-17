@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="login-page">
+        <div class="login-box">
+            <h3>Log in to your account</h3>
+            <p class="Welcome">Welcome back! Please enter your details.</p>
+<input class="email" type="email" placeholder="Email">
+<div class="error email-error"></div>
+<input class="password" type="password" placeholder="Password">
+<div class="error password-error"></div>
+            <div class="remember-me">
+ <input type="checkbox" id="remember" class="checkbox">
+  <label for="remember">Remember me</label>
+<div>
+<a href="Reset-Password.html" class="forget-password">Forget password</a>
+</div>
+</div>
+<button onclick="redirectToDashboard()">LOGIN</button>
+<p class="or">or continue with</p>
+<div class="social-icon">
+        <a href="##google">
+            <img src="image/google.png" alt="Google">
+        </a>
+        <a href="##facebook">
+            <img src="image/facebook.png" alt="Facebook">
+        </a>
+        <a href="##apple">
+            <img src="image/apple.png" alt="Apple">
+        </a>
+       
+</div>
+ <p class="sign-up">Don't have an account? <a href="sign-up.html" class="sgn">Sign up</a></p>
+        </div>
+        </div>
+        <div class="logo-page">
+<div class="logo-box">
+<img src="image/blood-donation.png" alt="Logo">
+<div class="hand-box">
+<img class="hand" src="image/donation-hand.png"> <h2>BLOOD PULS</h2>
+</div>
+</div>
+    </div>
+  </div>
+<script>
+function redirectToDashboard() {
+  const emailInput = document.querySelector('.email');
+  const passwordInput = document.querySelector('.password');
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  document.querySelectorAll('.error').forEach(el => {
+    el.style.display = 'none';
+    el.textContent = '';
+  });
+  emailInput.classList.remove('invalid');
+  passwordInput.classList.remove('invalid');
+  let hasError = false;
+  if (!email) {
+    const box = document.querySelector('.email-error');
+    box.textContent = 'Please enter your email address.';
+    box.style.display = 'block';
+    emailInput.classList.add('invalid');
+    hasError = true;
+  } else if (!email.endsWith('@gmail.com')) {
+    const box = document.querySelector('.email-error');
+    box.textContent = 'Email address must end with @gmail.com.';
+    box.style.display = 'block';
+    emailInput.classList.add('invalid');
+    hasError = true;
+  }
+  if (password.length < 8) {
+    const box = document.querySelector('.password-error');
+    box.textContent = 'Password must be at least 8 characters long.'; 
+    box.style.display = 'block';
+    passwordInput.classList.add('invalid');
+    hasError = true;
+  }
+  if (!hasError) {
+  
+    if (email === 'admin@gmail.com' && password === '123456hind') {
+      window.location.href = 'dashboard.html';
+    } else {
+      window.location.href = 'home.html';
+    }
+  }
+}
+</script>
+</body>
+</html>

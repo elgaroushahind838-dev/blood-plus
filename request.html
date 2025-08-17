@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Plus</title>
+    <link rel="stylesheet" href="styles/request.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="image/donation-hand2.png" alt="Logo" />
+        <h2>BLOOD PLUS</h2>
+      </div>
+      <div class="notification-wrapper">
+
+  <!-- Bildirim simgesi -->
+  <div class="contact">
+    <img src="image/notification.png" alt="Notification Icon" id="notificationToggle">
+  </div>
+  <!-- Bildirim kutusu -->
+  <div class="notification-box" id="notificationBox">
+    <div class="notification-header">
+      <strong>Notification</strong>
+      <span id="closeNotification">&times;</span>
+    </div>
+    <div class="notification-item">
+      <div class="dot blue"></div>
+      <div class="content">
+        <strong>New Blood Request</strong>
+        <p>A request for blood type O+ has been received from City Hospital.</p>
+      </div>
+      <span class="time">30 minutes ago</span>
+    </div>
+    <div class="notification-item">
+      <div class="dot red"></div>
+      <div class="content">
+        <strong>Blood Unit Nearing Expiry</strong>
+        <p>Blood unit of type B- expires on 2023-11-06. 10 minutes ago</p>
+      </div>
+      <span class="time">10 minutes ago</span>
+    </div>
+    <div class="notification-item">
+      <div class="dot green"></div>
+      <div class="content">
+        <strong>Donation Confirmed</strong>
+        <p>A new donation of blood type A+ has been successfully registered.</p>
+      </div>
+      <span class="time">2 hours ago</span>
+    </div>
+  </div>
+</div>
+
+    </header>
+
+    <div class="container">
+      <nav class="sidebar">
+        <ul>
+          <li>
+            <a href="Dashboard.html" class="Dashboard-link">
+              <div class="icon-box"><img src="image/home.svg" class="icon-svg" /></div>
+              <span class="nav-text">Dashboard</span>
+            </a>
+            
+          </li>
+          <li>
+            <a href="request.html" class="Dashboard-link active">
+              <span class="icon-box">
+                <img src="image/Request.svg" class="icon-svg" />
+              </span>
+              <span class="nav-text">Request</span>
+            </a>
+          </li>
+          <li>
+            <a href="Inventory.html" class="Dashboard-link">
+              <span class="icon-box">
+                <img src="image/Inventory.svg" alt="about us" class="icon-svg" />
+              </span>
+              <span class="nav-text">Inventory</span>
+            </a>
+          </li>
+        </ul>
+
+        <hr />
+        <div class="help-card">
+            <svg class="background-pattern" viewBox="0 0 600 600">
+              <circle cx="600" cy="600" r="100" />
+              <circle cx="600" cy="600" r="200" />
+              <circle cx="600" cy="600" r="300" />
+              <circle cx="600" cy="600" r="400" />
+            </svg>
+        
+            <div class="icon-wrapper">
+              <div class="icon">?</div>
+            </div>
+        
+            <div class="content">
+              <h2>Need help?</h2>
+              <p>Please check our docs</p>
+              <button class="doc-button">DOCUMENTATION</button>
+            </div>
+          </div>
+        <a href="profile-dashboard.html" class="profile-container">
+          <div class="avatar">
+            <img src="image/User.png" alt="User" />
+          </div>
+          <div class="profile-info">
+            <h2>Abod</h2>
+            <p>Abdulmotia@gmail.com</p>
+          </div>
+          <div class="arrow">
+            <img src="image/ok.png" alt="Arrow" />
+          </div>
+        </a>
+      </nav>
+      <main>
+         <div class="ana">
+        <div class="dashboard-header">
+  <h1>Welcome, Admin Name</h1>
+  <p>Gaza Blood Bank Dashboard</p>
+</div>
+         <div class="request-section">
+             <div class="filters">
+            <div class="section-header">
+              <h2>My Requests</h2>
+                <div class="search-box">
+    <input type="text" placeholder="search">
+    <svg class="icon3" xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="6"/>
+      <line x1="20" y1="20" x2="16" y2="16"/>
+    </svg>
+  </div>
+                <select class="date-picker">
+                    <option>Jan 18, 2025 - Jan 31, 2025</option>
+                    <option>Feb 1, 2025 - Feb 14, 2025</option>
+                    <option>Feb 15, 2025 - Feb 28, 2025</option>
+                  </select>
+                  
+                <button class="filter-button"><img src="image/filters.png"> Filters</button>
+              </div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #e4e4e6; margin: 10px 0; width: 100%;" />
+            <table class="request-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Location</th>
+                  <th>ID</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Blood</th>
+                </tr>
+              </thead>
+              <tbody>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+     <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-reject">Reject</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+     <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+     <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-reject">Reject</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+    <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-complete">Complete</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+     <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-reject">Reject</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+   <tr data-link="request-detail.html?id=0220"><td class="name">Ahmed Salah</td><td class="location">Gaza-Alremal</td><td class="id">#0220</td><td class="date">Jan18,2025</td><td><span class="status-tag status-pending">Pending</span></td><td><span class="blood-tag">Ab+</span> 01 Bag</td></tr>
+</tbody>
+            </table>
+ </div>
+             <div class="pagination">
+      <span class="right" ><img class="right-ok" src="image/right-ok.png" ></span>
+      <button class="active2">12</button>
+      <span class="of">Of </span><span class="number"> 128 </span>
+      <span class="left" ><img class="left-ok" src="image/left-ok.png" ></span>
+    </div>
+    <div class="footer-text">Showing Request 12 of 128</div>
+      </div>
+      </div>
+  <script>
+    const links = document.querySelectorAll('.Dashboard-link');
+  
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active'); 
+      });
+    });
+      document.querySelectorAll(".request-table tr[data-link]").forEach(row => {
+      row.addEventListener("click", () => {
+        const link = row.getAttribute("data-link");
+        window.location.href = link;
+      });
+    });
+
+     const toggleBtn = document.getElementById("notificationToggle");
+  const box = document.getElementById("notificationBox");
+  const closeBtn = document.getElementById("closeNotification");
+
+  toggleBtn.addEventListener("click", () => {
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    box.style.display = "none";
+  });
+
+  </script>
+  
+ 
+  </body>
+</html>
